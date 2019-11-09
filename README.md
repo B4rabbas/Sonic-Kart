@@ -19,3 +19,21 @@ See [SRB2 Wiki/Source code compiling](http://wiki.srb2.org/wiki/Source_code_comp
 
 ## Disclaimer
 Kart Krew is in no way affiliated with SEGA or Sonic Team. We do not claim ownership of any of SEGA's intellectual property used in SRB2.
+
+
+
+# Install build dependencies
+
+sudo apt-get build-dep srb2 srb2-data
+
+# Change to a folder of your choice, where the binary packages will be built
+
+mkdir ~/Packages
+cd ~/Packages
+
+# Build the SRB2 package
+
+apt source -t bionic --build srb2
+apt source -t bionic --build srb2-data
+
+# Install the SRB2 package

@@ -1,41 +1,41 @@
 Terminal connand to build SRB2 64bit from Ubuntu 64bit
 
 First you have to download the windows exe file who contain the gamefiles
-wget http://github.com/B4rabbas/Sonic-Kart/releases/download/1.0.0.0.0.0.1/srb2files.tar.gz
+    wget http://github.com/B4rabbas/Sonic-Kart/releases/download/1.0.0.0.0.0.1/srb2files.tar.gz
 
 Extract and delete archive :
-tar xvzf srb2files.tar.gz ; rm srb2files.tar.gz
+    tar xvzf srb2files.tar.gz ; rm srb2files.tar.gz
 
 
 Dependencies :
-sudo apt install -y libgme-dev libsdl2-mixer-dev libsdl2-dev zlib1g-dev libpng-dev nasm build-essential git
+    sudo apt install -y libgme-dev libsdl2-mixer-dev libsdl2-dev zlib1g-dev libpng-dev nasm build-essential git
 
 
 Download Source code :
-git clone https://github.com/STJr/SRB2.git
+    git clone https://github.com/STJr/SRB2.git
 
 Go in to the folder :
-cd SRB2
+    cd SRB2
 
 Start Compiling
-export LIBGME_CFLAGS=
-export LIBGME_LDFLAGS=-lgme
-make -C src/ LINUX64=1
+    export LIBGME_CFLAGS=
+    export LIBGME_LDFLAGS=-lgme
+    make -C src/ LINUX64=1
 
 Copy game executable in your files folder and delete source folder & 
-cd /..
-cp ~/SRB2/bin/Linux64/Release//lsdl2srb2 ~/srb2files/
-rm -rf ~/SRB2/
+    cd /..
+    cp ~/SRB2/bin/Linux64/Release//lsdl2srb2 ~/srb2files/
+    rm -rf ~/SRB2/
 
 Rename and copy in /usr/games
-sudo mv ~/srb2files/ /usr/games/SRB2/
+    sudo mv ~/srb2files/ /usr/games/SRB2/
 
 Launch with :
-/usr/games/SRB2/lsdl2srb2
+    /usr/games/SRB2/lsdl2srb2
 
 
 One time copy / paste :
-sudo apt install -y libgme-dev libsdl2-mixer-dev libsdl2-dev zlib1g-dev libpng-dev nasm build-essential git ; wget http://github.com/B4rabbas/Sonic-Kart/releases/download/1.0.0.0.0.0.1/srb2files.tar.gz ; tar xvzf srb2files.tar.gz ; rm srb2files.tar.gz ; git clone https://github.com/STJr/SRB2.git ; cd SRB2 ; export LIBGME_CFLAGS= ; export LIBGME_LDFLAGS=-lgme ; make -C src/ LINUX64=1 ; cd /.. ; cp ~/SRB2/bin/Linux64/Release//lsdl2srb2 ~/srb2files/ ; rm -rf ~/SRB2/ ; sudo mv ~/srb2files/ /usr/games/SRB2/
+    sudo apt install -y libgme-dev libsdl2-mixer-dev libsdl2-dev zlib1g-dev libpng-dev nasm build-essential git ; wget http://github.com/B4rabbas/Sonic-Kart/releases/download/1.0.0.0.0.0.1/srb2files.tar.gz ; tar xvzf srb2files.tar.gz ; rm srb2files.tar.gz ; git clone https://github.com/STJr/SRB2.git ; cd SRB2 ; export LIBGME_CFLAGS= ; export LIBGME_LDFLAGS=-lgme ; make -C src/ LINUX64=1 ; cd /.. ; cp ~/SRB2/bin/Linux64/Release//lsdl2srb2 ~/srb2files/ ; rm -rf ~/SRB2/ ; sudo mv ~/srb2files/ /usr/games/SRB2/
 
 
 

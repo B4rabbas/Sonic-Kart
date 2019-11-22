@@ -3,7 +3,7 @@ https://github.com/B4rabbas/Sonic-Kart/releases/download/1.0.0.0.0.1/Sonic.Kart.
 
 Here is a one line copy/paste to download it and install it :
 ```
-wget https://github.com/B4rabbas/Sonic-Kart/releases/download/1.0.0.0.0.1/Sonic.Kart.Mania.V1.3.srb2kart.1.1.DEB.tar.gz ; tar xvzf "Sonic Kart Mania V1.3 (srb2kart 1.1) DEB.tar.gz" ; ~/Sonic_Kart_Mania/DATA/InstallSonicKartMania
+wget https://github.com/B4rabbas/Sonic-Kart/releases/download/1.0.0.0.0.1/Sonic.Kart.Mania.V1.3.srb2kart.1.1.DEB.tar.gz ; tar xvzf Sonic.Kart.Mania.V1.3.srb2kart.1.1.DEB.tar.gz ; ~/Sonic_Kart_Mania/DATA/InstallSonicKartMania
 ```
 read the read-me included for further informations.
 

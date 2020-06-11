@@ -7,7 +7,7 @@ wget https://github.com/B4rabbas/Sonic-Kart/releases/download/1.0.0.0.0.1/Sonic.
 ```
 read the read-me included for further informations.
 
-# Build Sonic Robo Blast 2 64bit from Ubuntu 64bit
+# Build Sonic Kart 64bit from Ubuntu 64bit
 
 First you have to download the windows exe file who contain the gamefiles, but don't work with wget (idkw), here is to wget an archive from a forked repo (mine)
 ```
@@ -19,15 +19,15 @@ tar xvzf srb2files.tar.gz ; rm srb2files.tar.gz
 ```
 Dependencies :
 ```
-sudo apt install -y libgme-dev libsdl2-mixer-dev libsdl2-dev zlib1g-dev libpng-dev nasm build-essential git
+sudo apt install -y libgme-dev libsdl2-mixer-dev libsdl2-dev zlib1g-dev libpng-dev nasm build-essential git libcurl4 libcurl4-openssl-dev
 ```
 Download Source code :
 ```
-git clone https://github.com/B4rabbas/Sonic-Kart.git
+git clone https://github.com/STJr/Kart-Public.git
 ```
 Go in to the folder :
 ```
-cd Sonic-Kart
+cd Kart-Public
 ```
 Start Compiling
 ```

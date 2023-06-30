@@ -9,7 +9,7 @@ read the read-me included for further informations.
 
 # Build Sonic Kart 64bit from Ubuntu 64bit
 
-First you have to download the windows exe file who contain the gamefiles, but don't work with wget (idkw), here is to wget an archive from a forked repo (mine)
+First you have to download the game's assets.
 ```
 wget https://github.com/B4rabbas/Sonic-Kart/releases/download/1.0.0.0.0.0.1/sbr2kartfiles.tar.gz
 

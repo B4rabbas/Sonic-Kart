@@ -122,6 +122,11 @@ Go in to the folder :
 ```
 cd Kart-Public
 ```
+Optional - change branche (look the one you wan in https://github.com/STJr/Kart-Public/branches/all )
+```
+git checkout next
+```
+
 Start Compiling
 ```
 make -C src/ LINUX64=1 clean && make -C src/ LINUX64=1

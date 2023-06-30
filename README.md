@@ -95,14 +95,20 @@ make -C LINUX=1
 
 # Alternives methods for compiling
 
-First you have to download the windows exe file who contain the gamefiles, but don't work with wget (idkw), here is to wget an archive from a forked repo (mine)
+Using the instructions under, before compiling, you'll have to install discord-rpc for linux. You can either get it from [here](https://github.com/discord/discord-rpc/releases) or (maybe) from your distro's packages.
+
+In any case, the compiler needs to be able to make the link with ldiscord-rpc. Basically, on a typical install, the files /discord-rpc/linux-dynamic/include/*.h and /discord-rpc/linux-dynamic/lib/libdiscord-rpc.so (from the discord-rpc-linux.zip) needs to be install respectively in /usr/include/ and /usr/lib/ (or /usr/local/include/ and /usr/local/lib/ depending on your distro).
+
+Add a compile flag to step 3, to get: ```make -C src/ LINUX64=1 clean && make -C src/ LINUX64=1 HAVE_DISCORDRPC=1```
+
+First you have to download the game's assets.
 ```
 wget https://github.com/STJr/Kart-Public/releases/download/v1.6/AssetsLinuxOnly.zip
 
 ```
 Extract and delete archive :
 ```
-unzip AssetsLinuxOnly.zip ; rm AssetsLinuxOnly.zip
+mkdir sbr2kartfiles ; unzip AssetsLinuxOnly.zip -d sbr2kartfiles ; rm AssetsLinuxOnly.zip
 ```
 Dependencies :
 ```
@@ -118,9 +124,7 @@ cd Kart-Public
 ```
 Start Compiling
 ```
-export LIBGME_CFLAGS=
-export LIBGME_LDFLAGS=-lgme
-make -C src/ LINUX64=1
+make -C src/ LINUX64=1 clean && make -C src/ LINUX64=1
 ```
 You executable is in ~/SRB2/bin/Linux64/Release/
 

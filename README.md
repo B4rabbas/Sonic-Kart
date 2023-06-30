@@ -12,6 +12,8 @@ read the read-me included for further informations.
 First you have to download the windows exe file who contain the gamefiles, but don't work with wget (idkw), here is to wget an archive from a forked repo (mine)
 ```
 wget https://github.com/B4rabbas/Sonic-Kart/releases/download/1.0.0.0.0.0.1/sbr2kartfiles.tar.gz
+
+
 ```
 Extract and delete archive :
 ```
@@ -88,4 +90,53 @@ export LIBGME_CFLAGS=
 export LIBGME_LDFLAGS=-lgme
 set CC=gcc -m32 
 make -C LINUX=1 
+```
+
+
+# Alternives methods for compiling
+
+First you have to download the windows exe file who contain the gamefiles, but don't work with wget (idkw), here is to wget an archive from a forked repo (mine)
+```
+wget https://github.com/STJr/Kart-Public/releases/download/v1.6/AssetsLinuxOnly.zip
+
+```
+Extract and delete archive :
+```
+unzip AssetsLinuxOnly.zip ; rm AssetsLinuxOnly.zip
+```
+Dependencies :
+```
+sudo apt install -y libgme-dev libsdl2-mixer-dev libsdl2-dev zlib1g-dev libpng-dev nasm build-essential git libcurl4 libcurl4-openssl-dev
+```
+Download Source code :
+```
+git clone https://github.com/STJr/Kart-Public.git
+```
+Go in to the folder :
+```
+cd Kart-Public
+```
+Start Compiling
+```
+export LIBGME_CFLAGS=
+export LIBGME_LDFLAGS=-lgme
+make -C src/ LINUX64=1
+```
+You executable is in ~/SRB2/bin/Linux64/Release/
+
+If you want to install it, continue with
+
+Copy game executable in your files folder and delete source folder &
+```
+cd /..
+cp ~/Sonic-KART/bin/Linux64/Release/lsdl2srb2kart ~/sbr2kartfiles/
+sudo rm -rf ~/Sonic-Kart/
+```
+Rename and copy in /usr/games
+```
+sudo mv ~/sbr2kartfiles/ /usr/games/SRB2Kart/
+```
+Launch with :
+```
+/usr/games/SRB2Kart/lsdl2srb2kart
 ```
